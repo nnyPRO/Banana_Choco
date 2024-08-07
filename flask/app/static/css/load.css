@@ -1,0 +1,50 @@
+#window-loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.311);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#window-loader > .loader {
+    border: 16px solid var(--banana-color);
+    border-top: 16px solid var(--choco-color);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#window-loader > .PW {
+    color: var(--banana-color);
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.not-f {
+    width: 100%;
+    height: fit-content;
+    color: var(--choco-color);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

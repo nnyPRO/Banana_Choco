@@ -1,0 +1,423 @@
+/* write by Mesanee Laihueang 650510676 */
+
+
+body {
+    background-color: var(--banana-color) !important
+}
+
+.topic {
+    max-width: 100%;
+    height: 42px;
+    flex-shrink: 0;
+    color: var(--choco-color);
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 10px
+}
+
+.title {
+    color: var(--choco-color);
+    text-align: left;
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    padding: 1.6rem 0 0 1.8rem;
+}
+
+.divider {
+    width: 320px;
+    height: 8px;
+    background-color: var(--choco-color);
+    margin: auto;
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 25px;
+    
+}
+
+.boxSearch {
+    /* background: var(--choco-color); */
+    /* color: var(--banana-color); */
+    margin: auto;
+    width: 87%;
+    height: 39px;
+    border-radius: 30px;
+}
+
+#search-input{
+    /* background: var(--choco-color);
+    width: 87%;
+    height: 39px;
+    border-radius: 30px; */
+    /* padding: 1rem; */
+    color: var(--banana-color);
+    margin: auto;
+    width: 100%;
+    font-size: 1rem;
+    padding-right: 3.6rem;
+}
+
+#search-input::placeholder{
+    color: var(--banana-color);
+}
+
+
+input{
+    background: var(--choco-color) !important;
+}
+
+
+#search-icon{
+     
+    /* float: right; */
+    margin: auto; 
+    height: 18px;
+    /* width: 1.25rem; */
+    position: absolute;
+    right: 0.75rem;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    filter: var(--banana-filter);
+    
+}
+
+
+/* .search{
+    text-align: center;
+    margin: 16px;
+    top: 10px;
+    
+} */
+
+
+form{
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1.8rem;
+    width: 100%;
+}
+
+
+.box:hover{
+    background-color: var(--main2-color);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: 15px;
+    height: 30vh;
+    border-radius: 30px;
+    flex-shrink: 0;
+    overflow: hidden;
+    cursor: pointer;
+    /* left: 0; */
+    background-color: var(--main1-color);
+}
+
+.button {
+    background-color: var(--choco-color);
+    color: var(--banana-color);
+    border-radius: 6px;
+    padding: 10px 20px;
+    border-style:hidden;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.profile{
+    display: flex;
+    /* column-gap: 4px; */
+    align-items: center;
+    /* center: 0; */
+}
+
+.profile-icon{
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius:50px;
+}
+
+.people{
+    font-weight: bold;
+    color: var(--choco-color);
+    margin: auto;
+    margin-left: 7px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.deckName {
+    color: var(--choco-color);
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardNum{
+    color: var(--choco-color);
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description {
+    text-align: center;
+}
+
+.tags{
+    color: var(--choco-color);
+    font-size: 13px;
+    word-wrap: break-word
+}
+
+.tag{
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#preview {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.514);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#preview > .sug-window {
+    background-color: var(--main1-color);
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    background-color: var(--choco-color);
+    padding: 1rem 1rem 1rem 1rem;
+    width: 100%;
+}
+
+#preview > .sug-window > div > h1 {
+    color: var(--banana-color);
+    padding-bottom: 0.7rem;
+    margin-top: 1rem;
+}
+
+#preview > .sug-window > div > h4 {
+    color: var(--main1-color);
+}
+
+
+#preview > .sug-window > div > h1 > .x {
+    width: 1rem;
+    height: 2rem;
+    top: 1rem;
+    right: 1rem;
+}
+#preview > .sug-window > .sug-list {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+#preview > .sug-window > .sug-list > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#preview > .sug-window > .sug-list > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#preview > .sug-window > .sug-list > table tbody tr th {
+    text-align: center;
+    width: 50%;
+    overflow-x: hidden;
+    padding: 1rem;
+    color: var(--choco-color);
+    border-bottom: var(--choco-color) solid 3px;
+}
+
+#preview > .sug-window > .sug-list > hr {
+    width: 90%;
+    margin: auto;
+    border-radius: 2px;
+    border: none;
+    background-color: var(--choco-color);
+    height: 1.7px;
+}
+
+#preview > .sug-window > .sug-list {
+    overflow-y:scroll;
+}
+
+
+/* Footer */
+.add-footer {
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    margin: auto;
+    border-top: 3.9px solid var(--choco-color);
+    width: 100%;
+}
+
+.add-footer button {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--choco-color);
+    color: var(--banana-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    transition: all 0.25s ease-in;
+    cursor: pointer;
+}
+
+.add-footer button.secondary {
+    background-color: var(--banana-color);
+    color: var(--choco-color);
+    border: 2px solid var(--choco-color);
+}
+
+.add-footer button.secondary:hover {
+    background-color: var(--banana-hover-color);
+    color: var(--choco-color);
+}
+
+.add-footer button:hover {
+    color: var(--main1-color);
+}
+
+
+.x {
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.x > div {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background-color: var(--banana-color);
+}
+
+.x > div:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.x > div:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+
+.description {
+    text-align: center;
+}
+
+.button {
+    background-color: var(--choco-color);
+    color: var(--banana-color);
+    border-radius: 6px;
+    padding: 10px 20px;
+    border-style:hidden;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+.deckName {
+    color: var(--choco-color);
+    font-size: 15px;
+}
+
+.cardNum{
+    color: var(--choco-color);
+    font-size: 12px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media screen and (min-width: 601px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        row-gap: 2rem;
+        column-gap: 3rem;
+        max-width: 70rem;
+        padding: 1.8rem;
+    }
+
+    .boxSearch{
+        width: 92vw;
+        max-width: 66rem;
+    }
+
+    .title{
+        max-width: 70rem;
+    }
+
+    .add-footer > button{
+        width: 300px;
+        margin: auto;
+    }
+
+    .add-footer{
+        display: flex;
+    }
+
+    .header{
+        text-align: center;
+    }
+
+    .profile-icon {
+        width: 2rem;
+    }    
+
+}

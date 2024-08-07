@@ -1,0 +1,35 @@
+{% extends 'nav.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block cssimp %}
+{{ super() }}
+<link rel="stylesheet" href="/static/css/profile.css">
+{% endblock %}
+{% block content %}
+<header>
+    <h1>Profile</h1>
+    <div class="line"></div>
+</header>
+<form id="change-form">
+    <div class="avatar">
+        <div id="avatar-circle" style="background-image: url({{ user_data.avatar_url }});" class="avatar-circle">
+            <input id="icon-upload" type="file" class="hidden" accept="image/*"/>
+            <h2>click to upload image.</h2>
+        </div>
+        <h4>filesize limit 50MB.</h4>
+        <button type="button" id="btn-upload" class="secondary"><input id="input-upload" accept="image/*" type="file" class="hidden"/>Upload</button>
+    </div>
+    <div class="username">
+        <label id="new-username" for="username">Username<br>
+            <input type="text" name="username" placeholder="Enter New Name..." maxlength="255">
+            <p></p>
+        </label>
+    </div>
+    <button class="primary" type="submit">Save</button>
+</form>
+{% endblock %}
+{% block script %}
+<script src="/static/js/profile.js"></script>
+{{ super() }}
+{% endblock %}

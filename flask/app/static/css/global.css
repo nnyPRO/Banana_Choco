@@ -1,0 +1,83 @@
+/* add font (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    --choco-color: #503C1D;
+    --main1-color: #EEBA74;
+    --main2-color: #F6D394;
+    --main3-color: #FEECB3;
+    --danger-color: #ff4929;
+    --banana-color: #FFE86E;
+    --banana-hover-color: #dac55e;
+    --white-color: #fff;
+    --gray-color: #ecf0e8;
+
+    --cholo-filter: brightness(0) saturate(100%) invert(24%) sepia(24%) saturate(940%) hue-rotate(357deg) brightness(91%) contrast(96%);
+    --main1-filter: brightness(0) saturate(100%) invert(92%) sepia(100%) saturate(2812%) hue-rotate(306deg) brightness(103%) contrast(87%);
+    --main2-filter: brightness(0) saturate(100%) invert(100%) sepia(42%) saturate(2982%) hue-rotate(307deg) brightness(100%) contrast(105%);
+    --main3-filter: brightness(0) saturate(100%) invert(100%) sepia(25%) saturate(5083%) hue-rotate(302deg) brightness(105%) contrast(127%);
+    --danger-filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(3524%) hue-rotate(344deg) brightness(113%) contrast(109%);
+    --banana-filter: brightness(0) saturate(100%) invert(86%) sepia(32%) saturate(717%) hue-rotate(347deg) brightness(106%) contrast(102%);
+    --white-filter: brightness(0) saturate(100%) invert(100%) sepia(85%) saturate(1%) hue-rotate(60deg) brightness(105%) contrast(101%);
+
+    min-height: 100vh;
+    background-color: var(--banana-color);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+.icon-btn {
+    border-radius: 50%;
+    border: none;
+    width: 4rem;
+    height: 4rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    cursor: pointer;
+    background-color: var(--main3-color);
+}
+
+div.icon-img {
+    aspect-ratio: 1;
+    width: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: var(--cholo-filter);
+}
+
+input, textarea {
+    background: var(--main1-color);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.icon-img {
+    aspect-ratio: 1;
+    width: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: var(--cholo-filter);
+}
+
+.icon-img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}

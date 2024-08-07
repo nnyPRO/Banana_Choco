@@ -1,0 +1,303 @@
+body {
+    background-color: var(--banana-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.err_text {
+    color: var(--danger-color);
+    font-size: 0.7rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+}
+
+header {
+    color: var(--banana-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    margin-top: 2rem;
+}
+
+header > div.group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 16rem;
+}
+
+header > div.group > hr {
+    height: 0;
+    flex-grow: 1;
+    border-color: var(--banana-color);
+}
+
+header > div.group > h4 {
+    color: var(--main1-color);
+}
+
+header > div.bg {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--choco-color);
+    width: 100%;
+    height: 250%;
+    z-index: -1;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+}
+
+form {
+    width: 90%;
+    margin-bottom: 5rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+}
+
+form > .login-banner {
+    display: none;
+}
+
+form > .line-stand {
+    display: none;
+    width: 0.25rem;
+    background-color: var(--choco-color);
+}
+
+form > .login-form {
+    width: 100%;
+    background-color: var(--main1-color);
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+form > .login-form > h1 {
+    /* margin-top: 2.5rem; */
+    color: var(--choco-color);
+}
+
+form > .login-form > label {
+    color: var(--choco-color);
+    width: 85%;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+form > .login-form > label > input {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    color: var(--choco-color);
+    background-color: var(--main3-color);
+    border-radius: 0.75rem;
+    border: 2px solid var(--main2-color);
+}
+
+form > .login-form > label > input.err {
+    border-color: var(--danger-color);
+}
+
+form > .login-form  > input:focus {
+    outline: none;
+    border-color: var(--choco-color);
+}
+
+form > .login-form > button {
+    cursor: pointer;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--choco-color);
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 0.7rem 0;
+    transition: 0.25s all ease-in;
+}
+
+form > .login-form > button:hover {
+    color: var(--banana-color);
+}
+
+form > .login-form > .or {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+form > .login-form > .or > hr {
+    flex-grow: 1;
+    border-width: 2px;
+    height: 0;
+    border-color: var(--choco-color);
+    border-style: solid;
+}
+
+form > .login-form > .or > h3 {
+    color: var(--choco-color);
+}
+
+form > .login-form > .sso-group-sm {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+form > .login-form > .sso-group-dk {
+    display: none;
+}
+
+form > .login-form > .dont-have {
+    display: none;
+    color: var(--choco-color);
+    position: absolute;
+    bottom: 1rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: var(--choco-color);
+}
+
+footer b {
+    cursor: pointer;
+}
+
+footer b:hover {
+    color: var(--banana-color);
+}
+
+@media screen and (min-width: 601px) {
+    footer {
+        display: none;
+    }
+
+    form > .login-form > .dont-have {
+        display: block;
+    }
+
+    form > .login-form > .dont-have b {
+        cursor: pointer;
+    }
+
+    form > .login-form > .dont-have b:hover {
+        color: var(--banana-color);
+    }
+
+    form {
+        display: flex;
+        align-items: stretch;
+        max-width: 1000px;
+    }
+
+    form > .line-stand {
+        display: block;
+        /* flex-grow: 1; */
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+    }
+    
+    form > .login-form {
+        /* flex-grow: 2; */
+        width: 50%;
+    }
+
+    form > .login-banner {
+        display: flex;
+        /* flex-grow: 2; */
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        background-color: var(--main1-color);
+        /* height: 100%; */
+    }
+
+    form > .login-banner h1 {
+        color: var(--choco-color);
+        font-size: 3rem;
+    }
+
+    form > .login-banner h5 {
+        font-size: 1rem;
+        color: var(--banana-color);
+    }
+
+    form > .login-form > .sso-group-sm {
+        display: none;
+    }
+
+    form > .login-form > .sso-group-dk {
+        display: block;
+        margin-bottom: 2rem;
+        width: 80%;
+    }
+
+    form > .login-form > .sso-group-dk > button {
+        display: flex;
+        cursor: pointer;
+        padding: 1rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: var(--main3-color);
+        color: var(--choco-color);
+        font-weight: bold;
+        font-size: 1.2rem;
+        width: 100%;
+        margin: 0.7rem 0;
+        transition: 0.25s all ease-in;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    form > .login-form > .sso-group-dk > button:hover {
+        background-color: var(--main2-color);
+        color: var(--choco-color);
+
+    }
+
+    form > .login-form > .sso-group-dk > button > img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    form > .login-form > button {
+        width: 50%;
+    }
+
+    header > h1 {
+        font-size: 3rem;
+        /* color: var(--main1-color); */
+    }
+
+    header > div.group > h4 {
+        font-size: 1.25rem;
+        /* color: var(--main1-color); */
+    }
+    
+    form > .login-form > label > input {
+        font-size: 1.2rem;
+    }
+}

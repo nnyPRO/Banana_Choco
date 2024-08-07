@@ -1,0 +1,183 @@
+/* Write by Warisa 683 */
+
+body{
+    background-color: var(--banana-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.BackNextClose {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a . b" ". c .";
+    margin: 5rem 0 6rem;
+    width: 100%;
+    max-width: 900px;
+}
+.BackNextClose>button {
+    cursor: pointer;
+    padding: 1rem;
+    border: none;
+    border-radius: 10rem;
+    background-color: var(--main2-color);
+    color: var(--choco-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.25s all ease-in;
+}
+
+button.disable {
+    background-color: var(--main3-color);
+}
+.cards>#show-btn:hover{
+    background-color: var(--main1-color);
+}
+#back-btn:hover {
+    background-color: var(--main1-color);
+}
+.BackNextClose>#next-btn:hover {
+    background-color: var(--main1-color);
+}
+.BackNextClose>#close-btn:hover {
+    color: var(--main1-color);
+}
+
+.BackNextClose>#back-btn{
+    grid-area: a;
+}
+.BackNextClose>#next-btn {
+    grid-area: b;
+}
+
+
+.BackNextClose>#close-btn {
+    grid-area: c;
+    cursor: pointer;
+    border: none;
+    border-radius: 10rem;
+    background-color: var(--choco-color);
+    color: var(--banana-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    top: 5rem;
+    transition: 0.25s all ease-in;
+}
+
+
+.cards{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    /* padding: 10rem; */
+    height: 25rem;
+    width: full;
+    font-weight: bold;
+    background-color: var(--choco-color);
+    width: 100%;
+    max-width: 21rem;
+    transition: 0.25s all ease-in;
+    
+}
+
+.cards>.card-name{
+    /* width: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards>.card-name>h1 {
+    text-align: center;
+    color: var(--banana-color);
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.cards > #show-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    justify-items: center;
+    height: fit-content;
+    padding: 1rem;
+    border: none;
+    border-radius: 10rem;
+    background-color: var(--main2-color);
+    color: var(--choco-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 60%;
+    transition: 0.25s all ease-in;
+    z-index: 2;
+}
+
+
+.deck-name{
+    color: var(--choco-color);
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-style: normal;
+    line-height: normal;
+    transition: 0.25s all ease-in;
+}
+
+
+
+
+
+@media screen and (min-width: 601px) {
+
+.BackNextClose>button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.25s all ease-in;
+
+}
+
+
+.cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 100%;
+    max-width: 50rem;
+    flex-shrink: 0;
+    transition: 0.25s all ease-in;
+
+}
+
+
+.cards>.card-name >h1{
+    color: var(--banana-color);
+}
+
+
+}
+
+
+
+
+

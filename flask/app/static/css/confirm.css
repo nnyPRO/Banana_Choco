@@ -1,0 +1,66 @@
+#confirm {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.374);
+    z-index: 15;
+    padding: 0.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirm > .confirm-window {
+    width: 100%;
+    max-width: 30rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--main2-color);
+}
+
+#confirm > .confirm-window > h2 {
+    padding: 1rem 1.5rem;
+    color: var(--banana-color);
+    background-color: var(--choco-color);
+}
+
+#confirm > .confirm-window > p {
+    text-indent: 3rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    color: var(--choco-color);
+}
+
+#confirm > .confirm-window > .confirm-grp {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+#confirm > .confirm-window > .confirm-grp > button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: var(--main1-color);
+    cursor: pointer;
+    color: var(--choco-color);
+}
+
+#confirm > .confirm-window > .confirm-grp > button:hover {
+    background-color: var(--main3-color);
+}
+
+#confirm > .confirm-window > .confirm-grp > button.highlight {
+    color: var(--banana-color);
+    background-color: var(--choco-color);
+}
+
+#confirm > .confirm-window > .confirm-grp > button.highlight:hover {
+    color: var(--main1-color);
+}

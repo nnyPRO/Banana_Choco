@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block cssimp %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/login.css">
+{% endblock %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Banana Choco</h1>
+    <div class="group">
+        <hr>
+        <h4>flash card</h4>
+        <hr>
+    </div>
+    <div class="bg"></div>
+</header>
+<form id="login-form">
+    <div class="login-banner">
+        <div>
+            <h1>Hello,<br>Welcome!</h1>
+            <h5 id="subtitle">Please Login to continue</h5>
+        </div>
+    </div>
+    <div class="line-stand"></div>
+    <div class="login-form">
+        <h1 id="title">Login</h1>
+        <input type="text" name="type" value="login" hidden>
+        <label id="email" for="email">Email <br>
+            <input type="text" name="email" placeholder="Email...">
+        </label>
+        <label id="password" for="password">Password <br>
+            <input type="password" name="password" placeholder="Password...">
+        </label>
+        <button id="submit-btn" type="submit">Login</button>
+        <div class="or">
+            <hr style="border-top-right-radius: 1rem;border-bottom-right-radius: 1rem;">
+            <h3>or</h3>
+            <hr style="border-top-left-radius: 1rem;border-bottom-left-radius: 1rem;">
+        </div>
+        <div class="sso-group-sm">
+            <button onclick="window.location.href='/api/login/google'" type="button" class="icon-btn" style="background-image: url(/static/image/google-icon.png);"></button>
+            <button onclick="window.location.href='/api/login/fb'" type="button" class="icon-btn" style="background-image: url(/static/image/fb-icon.png);"></button>
+        </div>
+        <div class="sso-group-dk">
+            <button id="google-login-btn" type="button" onclick="window.location.href='/api/login/google'"><img src="/static/image/google-icon.png" alt=""> Login with Google</button>
+            <button id="fb-login-btn" type="button" onclick="window.location.href='/api/login/fb'"><img src="/static/image/fb-icon.png" alt=""> Login with Facebook</button>
+        </div>
+        <div id="account-status" class="dont-have">Don't have an account? <b id="change_type"><u>Sign Up</u></b></a></div>
+    </div>
+</form>
+<footer id="account-status">Don't have an account? <b id="change_type_mobile"><u>Sign Up</u></b></footer>
+{% endblock %}
+
+{% block script %}
+    <script src="/static/js/login.js"></script>
+{% endblock %}

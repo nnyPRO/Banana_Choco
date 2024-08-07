@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block cssimp %}
+<link rel="stylesheet" href="/static/css/nav.css">
+{% endblock %}
+
+{% block nav %}
+<nav>
+    <a href="/">
+        <h1>Banana Choco</h1>
+    </a>
+
+    <div class="nav-bg"></div>
+
+    <div class="ham" id="ham-nav">
+        <div class="in-ham"></div>
+        <div class="in-ham"></div>
+        <div class="in-ham"></div>
+    </div>
+    <ul class="mobile-tab" id="hidden-nav">
+        <li>Menu <div class="underline"></div></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/explore">Explore</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/api/logout">Log Out</a></li>
+        <li></li>
+    </ul>
+
+    <ul class="desk-tab">
+        <li><a href="/" style="background-image: url(/static/image/home-icon.png);"></a></li>
+        <li><a href="/explore" style="background-image: url(/static/image/explore-icon.png);"></a></li>
+        <li><a href="/profile" style="background-image: url(/static/image/profile-icon.png);"></a></li>
+        <li><a href="/api/logout" style="background-image: url(/static/image/logout-icon.png);"></a></li>
+    </ul>
+</nav>
+<div id="block-nav"></div>
+{% endblock %}
+{% block script %}
+<script src="/static/js/nav.js"></script>
+{% endblock %}

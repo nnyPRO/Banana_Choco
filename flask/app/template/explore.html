@@ -1,0 +1,60 @@
+<!-- write by Mesanee Laihueang 650510676 -->
+
+
+{% extends 'nav.html' %}
+
+{% block cssimp %}
+{{ super() }}
+
+<link rel="stylesheet" href="/static/css/explore.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+{% endblock %}
+{% block title %}Explore{% endblock %}
+    
+{% block content %}
+<main>
+    <h1 class="topic">Explore Flash Cards</h1>
+    <hr class="divider">
+
+    
+    <form id="formSearch">
+        <div class="boxSearch">
+            <input type="text" name="search" id="search-input" placeholder="search...">
+            <img src="/static/image/search-icon.png" id="search-icon" alt="Click to Search">
+        </div>
+    </form>
+        
+    
+    <h1 class="title">All Flash Cards</h1>
+
+    <div class="container"> 
+    </div>
+    
+    <div id="preview">
+        <div class="sug-window">
+            <div class="header">
+            </div>
+            <div class="sug-list">
+                <table>
+                    <tbody id="sug-own">
+                    </tbody>
+                </table>
+            </div>
+            <div class="add-footer">
+                <button onclick="onCopy();" id="copy-btn" type="button">Copy Deck</button>
+            </div>
+
+        </div>
+        
+    </div>
+    
+
+</main>
+{% endblock %}
+
+{% block script %}
+    <script src="/static/js/explore.js"></script>
+    {{ super() }}
+{% endblock %}

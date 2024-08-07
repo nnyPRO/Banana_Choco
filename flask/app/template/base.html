@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block cssimp %}{% endblock %}
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="stylesheet" href="/static/css/confirm.css">
+    <link rel="stylesheet" href="/static/css/load.css">
+    <link rel="shortcut icon" href="/static/image/fav.ico">
+    <title>{% block title %}{% endblock %} | Banana Choco The Flash Card</title>
+</head>
+<body>
+    
+    <div id="confirm">
+        <div class="confirm-window">
+            <h2>Test</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis officiis blanditiis molestias quod assumenda nemo magnam debitis maxime error. Ipsa blanditiis facilis quas aut obcaecati repellendus debitis enim repudiandae iusto?</p>
+            <div class="confirm-grp">
+            </div>
+        </div>
+    </div>
+    <div id="window-loader">
+        <div class="loader"></div>
+        <div class="PW">Please Wait ...</div>
+    </div>
+    {% block nav %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    <script src="/static/js/confirm.js"></script>
+    <script src="/static/js/load.js"></script>
+    {% block script %}
+    {% endblock %}
+  
+
+</body>
+</html>

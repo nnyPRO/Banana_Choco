@@ -1,0 +1,118 @@
+{% extends 'nav.html' %}
+
+{% block cssimp %}
+{{ super() }}
+<link rel="stylesheet" href="/static/css/add.css">
+{% endblock %}
+
+{% block title %}Create New Deck{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Edit Deck</h1>
+    <div class="underline"></div>
+</header>
+<div class="add-nav">
+    <div class="add-grp-nav">
+        <h2 class="activate" id="prop-btn" onclick="onChangePage('prop')">Property</h2>
+        <h2 id="card-btn" onclick="onChangePage('card')">Cards</h2>
+        <div id="bg-btn"></div>
+    </div>
+    <div class="line"></div>
+</div>
+<div id="deck">
+    <div id="prop-form" class="activate">
+        <label for="title">Title : </label>
+        <input id="title" type="text" name="title" maxlength="20" placeholder="Title..." style="text-align: center;">
+        <div class="status-tab">
+            <label for="status">Deck Status : </label>
+            <input id="status" maxlength="20" type="text" name="status" value="private" hidden>
+            <div id="status-toggle" onclick="onStatusToggle()" class="toggle">
+                <div>
+                    <div class="circle">
+                        <div>
+                            <b id="private-toggle" class="activate">Private</b>
+                            <b id="public-toggle">Public</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="tag">Tags : </label>
+        <form id="tag-form">
+            <div style="width: 100%;">
+                <ul id="tag-recm">
+                </ul>
+                <input type="text" id="tag-insert" name="tag" placeholder="Tag..." autocomplete="off">
+            </div>
+            <button type="submit">+</button>
+        </form>
+        <div id="tag-field">
+        </div>
+        <div class="block"></div>
+    </div>
+    <hr class='line'>
+    <div id="card-mng">
+        <h2>Cards Area</h2>
+        <form id="search">
+            <div>
+                <input type="text" name="search_input" id="search-input" placeholder="search...">
+                <img src="/static/image/search-icon.png" id="search-btn" alt="Click to Search">
+            </div>
+        </form>
+        <form id="card-form">
+        </form>
+        <div class="block"></div>
+    </div>
+</div>
+<div id="edit-own">
+    <div class="edit-own-window">
+        <h2>Do you want to change?</h2>
+        <p>this card references from your card in other deck(s). if you confirm to change other card, this card in every deck will change too.</p>
+        <div class="edit-own-btn-grp">
+            <button id="edit-own-change" type="button">change</button>
+            <button id="edit-own-nchange" type="button">not change</button>
+            <button id="edit-own-cancel" onclick="datamng.closeEditOwn();" type="button">cancel</button>
+        </div>
+    </div>
+</div>
+<div id="suggest">
+    <div class="sug-window">
+        <h1>Suggestion<div id="sug-close" class="x"><div></div><div></div></div></h1>
+        <ul class="sug-nav">
+            <li id="sug-nav-own" class="activate">My Deck</li> 
+            <li id="sug-nav-dict">Dictionary</li> 
+            <li id="sug-nav-other">Other Deck</li>
+            <li id="sug-nav-bg"></li>
+        </ul>
+        <div class="underline"></div>
+        <div class="table">
+            <table class="sug-list">
+                <tbody id="sug-own">
+                </tbody>
+            </table>
+            <table style="display: none;" class="sug-list">
+                <tbody id="sug-dict">
+                </tbody>
+            </table>
+            <table style="display: none;" class="sug-list">
+                <tbody id="sug-other">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="add-footer">
+    <button onclick="datamng.onAddInput();" type="button" style="grid-area: plus;">+</button>
+    <button onclick="onSave();" type="button" style="grid-area: save;">Save</button>
+    <button onclick="onCancel();" class="secondary" type="button" style="grid-area: cancel;">Cancel</button>
+</div>
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+<script>
+    let deck_data = {{ deck_data|tojson }};
+</script>
+<script src="/static/js/edit.js"></script>
+{% endblock %}

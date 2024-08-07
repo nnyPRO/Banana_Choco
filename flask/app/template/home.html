@@ -1,0 +1,70 @@
+<!-- write by Rachata 650510638 -->
+
+{% extends 'nav.html' %}
+
+{% block cssimp %}
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="/static/css/home.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+{{ super() }}
+{% endblock %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<header>
+    <div class="title">
+        <h1>My Flash Cards</h1>
+        <div class="hr-container-home-page"></div>
+    </div>
+</header>
+    
+<!-- <article class="container-home-page"> -->
+    
+<section class="deck-container-home-page">
+    <form id="search-form">
+        <div>
+            <input type="text" id="search-input" placeholder="search...">
+            <img src="/static/image/search-icon.png" id="search-btn" alt="Click to Search">
+        </div>
+    </form>
+    
+    <!-- static sample -->
+
+    <div class="deck-home-page">
+        <span class="title-deck">
+            <h3>
+                All Flashcards
+            </h3>
+        </span>
+        <div class="deck-bg">
+        </div>
+        <div class="block"></div>
+    </div>
+</section>
+<div id="deck-menu">
+    <div class="window-popup">
+        <div class="header">
+            <h1></h1> 
+            <div id="close-popup" class="close" onclick="onClose()"></div>
+        </div>
+        
+        <div class="option">
+            <button onclick="" id="play-btn" type="button"><h1>Play</h1></button>
+            <button onclick="" id="edit-btn" type="button"><h1>Edit</h1></button>
+            <button onclick="" id="delete-btn" type="button"><h1>Delete</h1></button>
+        </div>
+
+    </div>
+    
+</div>
+
+<div class="add-footer">
+    <button onclick="onChange('/create_deck');" type="button">+</button>
+</div>
+
+{% endblock %}
+{% block script %}
+{{ super() }}
+<script src="/static/js/home.js"></script>
+{% endblock %}
